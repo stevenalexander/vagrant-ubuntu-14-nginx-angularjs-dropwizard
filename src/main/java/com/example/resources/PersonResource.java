@@ -21,11 +21,15 @@ public class PersonResource {
             new Person()
                 .setId(1)
                 .setName("person1")
+                .setEmail("person1@test.com")
+                .setAge(21)
         );
         persons.add(
             new Person()
                 .setId(2)
                 .setName("person2")
+                .setEmail("person2@test.com")
+                .setAge(22)
         );
 
         return persons;
@@ -36,7 +40,9 @@ public class PersonResource {
     public Person get(@PathParam("id") Integer id){
         return new Person()
             .setId(id)
-            .setName("person" + id.toString());
+            .setName("person" + id.toString())
+            .setEmail("person1@test.com")
+            .setAge(21);
     }
 
     @POST

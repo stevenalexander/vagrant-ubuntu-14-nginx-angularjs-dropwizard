@@ -2,11 +2,11 @@
 
 /* Services */
 
-var appServices = angular.module('appServices', ['ngResource']);
+var appServices = angular.module('appServices', ['ngResource', 'appConfig']);
 
 appServices.factory('Person', ['$resource',
   function($resource){
-    return $resource('json/:personId.json', {}, {
-      query: {method:'GET', params:{personId:'persons'}, isArray:true}
+    return $resource(appConfig.serviceUrl + '/:personId', {}, {
+      query: {method:'GET', params:{personId:''}, isArray:true}
     });
   }]);

@@ -55,6 +55,8 @@ public class PersonTests {
     public static Person getPerson() {
         return new Person()
                 .setId(10)
-                .setName("person10");
+                .setName("person10")
+                .setEmail("person1@test.com")
+                .setAge(20);
     }
 }
