@@ -10,5 +10,6 @@ logs
 *.iml
 *.ipr
 *.iws
-puppet/modules/dropwizard_service/files/*
+puppet/modules/dropwizard_service/files/*.yml
+puppet/modules/dropwizard_service/files/*.jar
 puppet/modules/site_content/files/app/js/config.js

@@ -12,6 +12,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	v.memory = 256
   end
 
+  # run update to ensure java 7 dependencies are there
+  config.vm.provision "shell" do |s|
+    s.inline = "sudo apt-get update"
+  end
+
   config.vm.provision "puppet" do |puppet|
     puppet.manifests_path = "puppet/manifests"
     puppet.manifest_file  = "site.pp"

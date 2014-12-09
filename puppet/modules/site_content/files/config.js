@@ -4,4 +4,4 @@
 
 var appConfig = angular.module('appConfig', []);
 
-appConfig.serviceUrl = "person";
+appConfig.serviceUrl = "api/person";

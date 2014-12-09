@@ -12,8 +12,8 @@ class dropwizard_service {
       source  => "puppet:///modules/dropwizard_service/config.yml",
       notify  => Service['dropwizard-sample'];
 
-    "/opt/dropwizard-sample/vagrant-ubuntu-14-puppet-dropwizard-standalone.jar":
-      source  => "puppet:///modules/dropwizard_service/vagrant-ubuntu-14-puppet-dropwizard-standalone.jar",
+    "/opt/dropwizard-sample/vagrant-ubuntu-14-nginx-angularjs-dropwizard-standalone.jar":
+      source  => "puppet:///modules/dropwizard_service/vagrant-ubuntu-14-nginx-angularjs-dropwizard-standalone.jar",
       notify  => Service['dropwizard-sample'];
   }
 
