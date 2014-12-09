@@ -20,7 +20,7 @@ describe('app', function() {
     it('should display persons', function() {
       var personList = element.all(by.repeater('person in persons'));
 
-      expect(personList.count()).toBe(5);
+      expect(personList.count()).toBe(2);
     });
 
     it('should render person specific links', function() {
@@ -40,7 +40,7 @@ describe('app', function() {
 
 
     it('should display person', function() {
-      expect(element(by.binding('person.name')).getText()).toBe('John Smith');
+      expect(element(by.binding('person.name')).getText()).toBe('person1');
     });
   });
 });

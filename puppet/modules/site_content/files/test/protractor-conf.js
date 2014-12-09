@@ -6,7 +6,10 @@ exports.config = {
   ],
 
   capabilities: {
-    'browserName': 'chrome'
+    'browserName': 'chrome',
+    'chromeOptions': {
+      args: ['test-type', 'disable-web-security']
+    }
   },
 
   chromeOnly: true,
