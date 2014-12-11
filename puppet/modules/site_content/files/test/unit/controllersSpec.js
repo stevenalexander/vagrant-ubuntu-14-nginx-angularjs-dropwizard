@@ -21,7 +21,7 @@ describe('app controllers', function() {
 
     beforeEach(inject(function(_$httpBackend_, $rootScope, $controller) {
       $httpBackend = _$httpBackend_;
-      $httpBackend.expectGET('json/persons.json').
+      $httpBackend.expectGET('http://localhost:8095/api/person').
           respond(testPersons);
 
       scope = $rootScope.$new();
@@ -45,7 +45,7 @@ describe('app controllers', function() {
 
     beforeEach(inject(function(_$httpBackend_, $rootScope, $routeParams, $controller) {
       $httpBackend = _$httpBackend_;
-      $httpBackend.expectGET('json/1.json').respond(testPerson);
+      $httpBackend.expectGET('http://localhost:8095/api/person/1').respond(testPerson);
 
       $routeParams.personId = '1';
       scope = $rootScope.$new();
